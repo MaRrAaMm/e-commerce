@@ -7,6 +7,7 @@ import { ProductRepository } from "src/DB/Models/Product/product.repository";
 import { CreateProductDTO } from "./dto/index";
 import { TProduct } from "src/DB/Models/Product/product.schema";
 import { Types } from "mongoose";
+import { Product } from "src/DB/Models/Product/product.schema";
 import { IImage } from "src/DB/Models/Category/category.schema";
 
 @Injectable()
@@ -37,7 +38,7 @@ export class productService {
         req.files as Express.Multer.File[],
         folderId
     );
-    const product :Partial <TProduct>= {
+    const product: Partial<Product> = {
         category, 
         title,
         price, 

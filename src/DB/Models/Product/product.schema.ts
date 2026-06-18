@@ -52,4 +52,5 @@ export class Product{
 
 }
 export const productSchema =SchemaFactory.createForClass(Product);
-export type TProduct = HydratedDocument<Product> & Document;
+// export type TProduct = HydratedDocument<Product> & Document;
+export type TProduct = HydratedDocument<Product>;
